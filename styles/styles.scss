@@ -1,0 +1,105 @@
+@import './normalize';
+@import './variables';
+
+body {
+  background-color: $white;
+}
+
+.wrapper {}
+
+.header {
+  position: relative;
+  padding-top: 18.5px;
+  width: 60%;
+  height: 73.5px;
+  display: flex;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: left;
+  color: $black;
+
+  &__vertical-line {
+    width: 1px; /* Ширина линии */
+    height: 36px; /* Высота линии */
+    background-color: $black; /* Цвет линии */
+    opacity: 20%;
+    position: absolute;
+    top: 30px;
+    left: 222px;     
+  }
+
+  &__group {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-left: 52px;
+    width: 180px;
+  }
+
+  &__map {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+    &_item {
+      border-radius: 50px;
+      border: solid $white 6px;
+    }
+
+    &_text {
+      align-items: center;
+      width: 120px;
+    }
+  }
+  
+  &__phone {
+    width: 233px;
+    display: flex;
+    gap: 8px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    padding: 12px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(#767676, 0.3); /* Слабая тень внизу */
+
+    &_img {
+      width: 31px;
+      height: 31px;
+    }
+
+    &_number {
+      font-size: 20px;
+      line-height: 20px;
+      color: #818181;
+
+      span {
+        font-weight: 600;
+        color: $red;
+      }
+    }
+
+    &_text {
+      position: relative;
+      text-align: right;
+      color: #767676;
+      font-size: 10px;
+
+      span {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #79BC6E;
+        top: 5.5px;
+        left: 32px;
+      }
+    }
+  }
+  
+}

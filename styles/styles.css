@@ -1,0 +1,135 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  font-family: Manrope, system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+span,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: black;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.header {
+  position: relative;
+  padding-top: 18.5px;
+  width: 60%;
+  height: 73.5px;
+  display: flex;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: left;
+  color: #3F3F3F;
+}
+.header__vertical-line {
+  width: 1px; /* Ширина линии */
+  height: 36px; /* Высота линии */
+  background-color: #3F3F3F; /* Цвет линии */
+  opacity: 20%;
+  position: absolute;
+  top: 30px;
+  left: 222px;
+}
+.header__group {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+.header__title {
+  display: flex;
+  align-items: center;
+  margin-left: 52px;
+  width: 180px;
+}
+.header__map {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header__map_item {
+  border-radius: 50px;
+  border: solid #FFFFFF 6px;
+}
+.header__map_text {
+  align-items: center;
+  width: 120px;
+}
+.header__phone {
+  width: 233px;
+  display: flex;
+  gap: 8px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  padding: 12px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(118, 118, 118, 0.3); /* Слабая тень внизу */
+}
+.header__phone_img {
+  width: 31px;
+  height: 31px;
+}
+.header__phone_number {
+  font-size: 20px;
+  line-height: 20px;
+  color: #818181;
+}
+.header__phone_number span {
+  font-weight: 600;
+  color: #E21F4D;
+}
+.header__phone_text {
+  position: relative;
+  text-align: right;
+  color: #767676;
+  font-size: 10px;
+}
+.header__phone_text span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #79BC6E;
+  top: 5.5px;
+  left: 32px;
+}
+
+/*# sourceMappingURL=styles.css.map */
