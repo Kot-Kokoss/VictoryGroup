@@ -1,0 +1,69 @@
+.link {
+  color: $black;
+  font-size: 13px;
+  border-bottom: 1px dotted rgba(#767676, 0.3);
+
+  &:hover {
+    border-bottom: 1px dotted #767676;
+    transition: ease;
+    transition-duration: 0.25s;
+  }
+}
+
+.button__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  border-radius: 50px;
+  background-color: $white;
+  border: 1px solid $white;
+  cursor: pointer;
+
+  img {
+    padding: 12px 18px ;
+  }
+
+  .right {
+    transform: scaleX(1)
+  }
+
+  .left {
+    transform: scaleX(-1)
+  }
+
+  .up {
+    transform: rotate(-90deg);
+  }
+
+  .down {
+    transform: rotate(90deg);
+  }
+
+  &:hover, &:active {
+    border: 1px solid $linear;
+    background-color: $linear;
+    transition: ease;
+    transition-duration: 0.25s;
+  }
+
+}
+
+.button__record {
+  background-color: $red;
+  border-radius: 1000px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  font-weight: 600;
+  color: $white;
+  box-shadow: inset 0 0 27px rgba(255, 255, 255, 0.46), inset 0 0 4px rgba(255, 255, 255, 0.46);
+
+  &.lg {
+    font-size: 18px;
+    padding: 28px 52px;
+  }
+
+  &:hover, &:active {
+    background-color: $red_hover;
+    transition: ease-in-out 0.25s;
+  }
+}
