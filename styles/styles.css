@@ -964,9 +964,6 @@ body {
   text-align: start;
   align-items: flex-start;
 }
-.footer .map-wrapper {
-  position: relative;
-}
 .footer .map {
   width: 604px;
   height: 604px;
