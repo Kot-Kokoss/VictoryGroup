@@ -173,14 +173,6 @@ a {
   transition: ease-in-out 0.25s;
 }
 
-.serviceSwiper {
-  position: relative;
-}
-
-.swiper-slide {
-  max-height: 500px;
-}
-
 body {
   background-color: #FFFFFF;
   color: #3F3F3F;
@@ -487,6 +479,12 @@ body {
   gap: 17px;
   align-items: center;
 }
+.services .serviceSwiper {
+  position: relative;
+}
+.services .serviceSwiper .swiper-slide {
+  max-height: 500px;
+}
 .services .services-btn-wrapper {
   position: relative;
   z-index: 5;
@@ -563,6 +561,8 @@ body {
 }
 
 .specialists {
+  position: relative;
+  z-index: 5;
   margin: 0 auto;
   margin-top: -30px;
   padding: 0 149px;
@@ -641,15 +641,16 @@ body {
 .principles {
   display: flex;
   justify-content: end;
+  margin-bottom: 51px;
 }
 .principles-pictures {
   position: relative;
-  z-index: -1;
+  z-index: 2;
 }
 .principles-pictures__hero {
   position: absolute;
-  top: -120px;
-  left: -890px;
+  top: 10px;
+  left: -776px;
 }
 .principles-pictures__star_1 {
   position: absolute;
@@ -658,8 +659,8 @@ body {
 }
 .principles-pictures__star_2 {
   position: absolute;
-  top: 720px;
-  left: 350px;
+  top: 700px;
+  left: 370px;
 }
 .principles-pictures__star_3 {
   position: absolute;
@@ -686,7 +687,6 @@ body {
   flex-direction: column;
   width: 400px;
   gap: 20px;
-  margin-bottom: 29px;
 }
 .principles-list__item {
   display: flex;
@@ -708,6 +708,151 @@ body {
 }
 .principles-list__desc span {
   font-weight: 700;
+}
+
+.reviews {
+  position: relative;
+  z-index: 1;
+  background-color: #F5F5F5;
+  border-radius: 50px;
+  margin: 0 auto;
+  padding: 0 165px;
+  width: 79vw;
+}
+.reviews__name {
+  margin-top: 64px;
+  margin-bottom: 20px;
+}
+.reviews__wrapper {
+  display: flex;
+  gap: 134px;
+  padding-bottom: 38px;
+}
+.reviews-types {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.reviews-types__list {
+  display: flex;
+  gap: 20px;
+}
+.reviews-types__item {
+  font-size: 14px;
+  color: #3F3F3F;
+}
+.reviews-types__item_active {
+  font-size: 14px;
+  color: #E21F4D;
+}
+.reviews-links {
+  position: relative;
+  z-index: 5;
+}
+.reviews-links__desc {
+  width: 334px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.reviews-links__list {
+  display: flex;
+  gap: 20px;
+}
+.reviews-links__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  box-shadow: 0 13px 24px 0 rgba(0, 0, 0, 0.1);
+}
+.reviews .review-window {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 89px;
+}
+.reviews .review-window__content {
+  width: 792px;
+  height: 482px;
+  position: relative;
+}
+.reviews .review-window__content .play-btn {
+  position: absolute;
+  top: 140px;
+  left: 300px;
+}
+.reviews .review-card__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #FFFFFF;
+  width: 211px;
+  height: 72px;
+  border-radius: 10px;
+  border: 1px solid #FFFFFF;
+  padding: 5px 0 5px 20px;
+  box-shadow: 0 4px 59px 0 rgba(0, 0, 0, 0.08);
+}
+.reviews .review-card__item:hover, .reviews .review-card__item:active {
+  background-color: #fcc7d4;
+  border: 1px solid #E21F4D;
+}
+.reviews .review-card__item.active {
+  border: 1px solid #E21F4D;
+}
+.reviews .review-card__avatar {
+  border-radius: 50px;
+  border: 6px solid #FFFFFF;
+  width: 62px;
+  height: 62px;
+}
+.reviews .review-card__info {
+  height: 34px;
+}
+.reviews .review-card__name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.reviews .review-card__city {
+  font-size: 11px;
+  opacity: 60%;
+}
+.reviews .reviewSwiper {
+  max-width: 300px;
+  max-height: 490px;
+  position: relative;
+  background-color: #F5F5F5;
+}
+.reviews .reviewSwiper .swiper-slide_review {
+  max-height: 72px;
+  width: 250px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reviews .reviewSwiper .swiper-slide_review img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reviews .review-btn-wrapper {
+  position: relative;
+  z-index: 10;
+}
+.reviews .review-btn-wrapper .review-btn-prev {
+  top: 0px;
+  left: 0px;
+}
+.reviews .review-btn-wrapper .review-btn-next {
+  top: 0px;
+  left: 0px;
 }
 
 /*# sourceMappingURL=styles.css.map */
