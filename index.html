@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VictoryTest</title>
 </head>
@@ -83,9 +84,83 @@
       <h3 class="services__name sectionName">Наши услуги</h3>
       <h2 class="services__title title_h2">Мы предлагаем <span>полное медицинское обслуживание</span>
          людям с различными проблемами со здоровьем</h2>
-      <div class="slider" style="font-size: 60px ; text-align: center;">
-        СЛАЙДЕР
+      <div class="swiper serviceSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="services-card">
+              <img src="./img/service_1.png" class="services-card__img" alt="">
+              <div class="services-card__info">
+                <div class="services-card__title">Лечение зубов</div>
+                <div class="services-card__desc">
+                  Залог здоровья зубов – своевременное лечение
+                   у стоматолога. Важно обратиться в клинику...
+                </div>
+                <div class="services-card__wrapper">
+                  <button class="button sm">Записаться</button>    
+                  <a class="link" href="#">Читать полностью</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services-card">
+              <img src="./img/service_2.png" class="services-card__img" alt="">
+              <div class="services-card__info">
+                <div class="services-card__title">Удаление зубов</div>
+                <div class="services-card__desc">
+                  Удаление зуба – это простая процедура, которая
+                  давно стала рутиной для стоматологов...
+                </div>
+                <div class="services-card__wrapper">
+                  <button class="button sm">Записаться</button>    
+                  <a class="link" href="#">Читать полностью</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services-card">
+              <img src="./img/service_3.png" class="services-card__img" alt="">
+              <div class="services-card__info">
+                <div class="services-card__title">Зубная гигиена</div>
+                <div class="services-card__desc">
+                  Профессиональная гигиена зубов – очистка всех
+                  поверхностей зуба от налета и отложений...
+                </div>
+                <div class="services-card__wrapper">
+                  <button class="button sm">Записаться</button>    
+                  <a class="link" href="#">Читать полностью</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services-card">
+              <img src="./img/service_4.png" class="services-card__img" alt="">
+              <div class="services-card__info">
+              <div class="services-card__title">Имплантация зубов</div>
+              <div class="services-card__desc">
+                Титановый имплант устанавливается на место
+                утраченного зуба и играет роль его корня...
+              </div>
+              <div class="services-card__wrapper">
+                <button class="button sm">Записаться</button>    
+                <a class="link" href="#">Читать полностью</a>
+              </div>
+            </div>
+           </div>
+          </div>
+        </div>
+              
       </div>
+      <div class="services-btn-wrapper">
+        <button class="button__arrow services-btn-prev">
+          <img class="left" src="./img/angle-right.svg" alt="">
+        </button>
+        <button class="button__arrow services-btn-next">
+          <img class="right" src="./img/angle-right.svg" alt="">
+        </button>
+      </div>    
     </section>
     <section class="clinic">
       <div class="hero-info">
@@ -126,10 +201,19 @@
 и демократичные цены.
          </p>
       </div>
-
-      
     </section>
   </div>
-  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>  
+    const swiper = new Swiper('.serviceSwiper', {
+      loop: false,
+      slidesPerView: 3,
+      spaceBetween: 25,
+      navigation: {
+        nextEl: '.services-btn-next',
+        prevEl: '.services-btn-prev',
+      }
+});
+  </script>
 </body>
 </html>
