@@ -578,6 +578,9 @@
             <a href="#" class="footer-links__item">Правовая информация</a>
           </div>
         </div>
+        <div class="map-wrapper">
+          <div id="map" class="map"></div>
+        </div>        
         <div class="footer-right">
           <div class="footer-item">
             <img src="./img/icon/whatsApp_logo.svg" alt="">
@@ -594,13 +597,14 @@
             <a href="#" class="footer-links__item">Сертификаты сотрудников</a>
             <a href="#" class="footer-links__item">Политика конфиденциальности</a>
           </div>
-        </div>
-        
+        </div>        
       </div>
     </div>
   </footer>  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=test&lang=ru_RU"></script>
   <script>  
+    //swipers
     const serviceSwiper = new Swiper('.serviceSwiper', {
       loop: false,
       slidesPerView: 3,
@@ -620,6 +624,33 @@
         prevEl: '.review-btn-prev',
       }
     });
+
+    //map
+    const center = [55.65920056905622, 37.7464715];
+
+    function init() {
+      let map = new ymaps.Map("map", {
+        center: [55.65879277472812,37.74641952943794],
+        zoom: 17,
+        controls: []
+      });
+
+      let placemark = new ymaps.Placemark(
+        center,
+        {},
+        {
+          // preset: 'islands#greenCircleIcon'
+        }
+      );
+
+      map.geoObjects.add(placemark);
+    }
+
+    ymaps.ready(init);
+    
+    
+    
+
   </script>
 </body>
 </html>
