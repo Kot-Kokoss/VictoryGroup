@@ -3,7 +3,8 @@
 @import './buttons';
 
 body {
-  background-color: $white;
+  background-color: $white;  
+  color: $black;
 }
 
 .wrapper {
@@ -19,9 +20,8 @@ body {
   margin: 0 auto;
   font-size: 14px;
   text-align: left;
-  color: $black;
 
-  &__vertical-line {
+  .vertical-line {
     width: 1px;
     height: 36px; 
     background-color: $black; 
@@ -31,7 +31,7 @@ body {
     left: 222px;     
   }
 
-  &__group {
+  &__wrapper {
     display: flex;
     width: 100%;
     height: 100%;
@@ -45,26 +45,26 @@ body {
     width: 180px;
   }
 
-  &__map {
+  .location {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    
-    &_item {
+
+    &__map {
       img {
         border-radius: 50px;
         border: solid $white 6px;
-      }      
+      }  
     }
 
-    &_text {
+    &__address {
       align-items: center;
       width: 120px;
     }
   }
   
-  &__phone {
+  .contacts {
     width: 233px;
     display: flex;
     gap: 8px;
@@ -74,12 +74,12 @@ body {
     border-radius: 673px;
     box-shadow: 0 2px 5px rgba(#767676, 0.3); 
 
-    &_img {
+    &__icon {
       width: 31px;
       height: 31px;
     }
 
-    &_number {
+    &__number {
       font-size: 20px;
       line-height: 20px;
       color: #818181;
@@ -90,7 +90,7 @@ body {
       }
     }
 
-    &_text {
+    &__desc {
       position: relative;
       text-align: right;
       color: #767676;
@@ -106,7 +106,7 @@ body {
         left: 32px;
       }
     }
-
+    
     &:hover {
       background-color: $linear;
     }
@@ -117,33 +117,31 @@ body {
 .intro {
   display: flex;
   margin-top: 26px;
-  color: $black;
+  margin-bottom: 48px;
 
-  &__img {
-    &_group {
-      position: relative;
-    }
+  .pictures {
+    position: relative;
 
-    &_person {
+    &__person {
       position: relative;
       z-index: 5;
     }
     
-    &_signature {
+    &__signature {
       z-index: 5;
       position: absolute;
       right: -55px;
       bottom: 10px;
     }
 
-    &_effect {
+    &__effect {
       z-index: 4;
       position: absolute;
       left: -380px;
       bottom: 4px;
     }
     
-    &_name {
+    .nametag {
       top: 506px;
       left: 169px;
       z-index: 6;
@@ -172,7 +170,7 @@ body {
       }
     }
 
-    &_desc {
+    .slogan {
       text-align: left;
 
       > div:nth-child(1) {
@@ -184,72 +182,41 @@ body {
         top: 582px;
         left: 193px;
       }
-    }
 
-    &_slogan {
-      z-index: 5;
-      position: absolute;
-      top: 20px;
-      display: inline-block;
-      background-color: $white;
-      border-radius: 5px;
-      padding: 7.5px 15px 13.5px 23px;
-      font-size: 18px;
-      line-height: 28px;
-    }
+      &__item {
+        z-index: 5;
+        position: absolute;
+        top: 20px;
+        display: inline-block;
+        background-color: $white;
+        border-radius: 5px;
+        padding: 7.5px 15px 13.5px 23px;
+        font-size: 18px;
+        line-height: 28px;
 
-    &_span {
-      z-index: 5;
-      top: 611px;
-      left: 193px;
-      position: absolute;
-      display: inline-block;
-      color: $gray;
-      width: 178px;
-      background-color: $white;
-      border-radius: 5px;
-      font-size: 11px;
-      padding: 7.5px 15px 13.5px 23px;
-    }    
+        &_span {
+          z-index: 5;
+          top: 615px;
+          left: 193px;
+          position: absolute;
+          display: inline-block;
+          color: $gray;
+          width: 178px;
+          background-color: $white;
+          border-radius: 5px;
+          font-size: 11px;
+          padding: 7.5px 15px 13.5px 23px;
+        }
+      }
+    }
   }
   
-  &__group {
+  &__wrapper {
     z-index: 5;
     margin-left: 75px;
   }
-
-  &__record {
-    position: relative;
-
-    &_bg {
-      z-index: 1;
-      width: 236px;
-      height: 64px;
-      border-radius: 1000px;
-      background-color: rgba(255, 255, 255, 0.6);
-      border: solid 1px $white;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    &_bgBlur{
-      position: absolute;
-      z-index: 2;
-      width: 236px;
-      height: 64px;
-      border-radius: 1000px;
-      background-color: rgba(226, 31, 77, 0.6);
-      filter: blur(34px);
-    }
-
-    &_filter {
-      z-index: -1;
-      position: absolute;
-      margin-top: 27px;
-      margin-left: 28px;
-    }
-  }
   
-  &__title {
+  &__title_h1 {
     margin-left: -57px;
     margin-top: 53px;
     margin-bottom: 41px;
@@ -268,7 +235,7 @@ body {
     margin-bottom: 31px;
   }
   
-  &__card {
+  .card {
     display: flex;
     position: relative;
     align-items: center;
@@ -279,40 +246,155 @@ body {
     background-color: $white;
     box-shadow: 0 2px 5px rgba(#767676, 0.3);
 
-    &_img {
+    &__img {
       width: 55px;
       height: 55px;
       margin: 43px 28px;
     }
 
-    &_info {
+    &__info {
       text-align: left;
       margin-right: 35px;
     }
 
-    &_title {
+    &__title {
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 5px;
     }
 
-    &_desc {
+    &__desc {
       font-size: 13px;
       margin-bottom: 10px;
+    } 
+    
+    &__button {
+      position: absolute;
+      right: -27px
     }
+  }
+}
 
-    &_link {
-      color: $black;
-      font-size: 13px;
-      border-bottom: 1px dotted rgba(#767676, 0.3);
+// general style start
 
-      &:hover {
-        border-bottom: 1px dotted #767676;
-        transition: ease;
-        transition-duration: 0.25s;
+.sectionName {
+  display: inline-block;
+  color: $red;
+  font-size: 14px;
+  padding: 13px 29px;
+  background-color: $white;
+  border-radius: 350px;
+  box-shadow: 0 4px 59px rgba(0, 0, 0, 0.08);
+  
+}
+
+.title_h2 {
+  text-align: left;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  span {
+    color: $red;
+    font-weight: 800;
+  }
+}
+
+// general style end 
+
+.services {
+  &__name {
+    width: 150px;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-left: 12px;
+    margin-bottom: 54px;
+  }
+
+  .slider {
+    width: 100%;
+    height: 400px;
+    background-color: #79BC6E;
+    margin-bottom: 100px;
+  }
+}
+
+.clinic {
+  display: flex;
+
+  .hero-info {
+
+    .hero {
+      width: 206px;
+      font-size: 55px;
+      line-height: 105%;
+      text-transform: none;
+      font-weight: 400;
+      text-align: start;
+
+      span {
+        font-weight: 600;
       }
     }
 
-    
+    &__post {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 33px;
+    }
   }
+
+  .hero-pictures {
+    position: relative;
+
+    &__hero {
+      position: absolute;
+      top: 0px;
+      left: -100px;
+    }
+
+    &__signature {
+      position: absolute;
+      max-width: 110px;
+      top: 410px;
+      right: -725px;
+    }
+  }
+
+
+  &-info {
+    &__text {
+      margin-left: 319px;
+    }
+    
+    &__name {
+      margin-bottom: 20px;
+    }
+  
+    &__title {
+      position: relative;
+      width: 433px;
+      margin-bottom: 20px;
+  
+      &_star {
+        position: absolute;
+        top: -6px;
+        left: -13px;
+      }
+    }
+  
+    &__desc {
+      text-align: left;
+      margin-left: 99px;
+      font-size: 16px;
+      line-height: 150%;
+  
+      span {
+        font-weight: 600;
+      }
+    }
+  }  
 }

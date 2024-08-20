@@ -12,74 +12,122 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <a class="header__logo" href="#">
+      <a class="logo" href="#">
         <img src="./img/logo.svg" alt="">
       </a>
-      <span class="header__vertical-line"></span>
-      <div class="header__group">
+      <span class="vertical-line"></span>
+      <div class="header__wrapper">
         <div class="header__title">Американский стоматологический центр</div>
-        <div class="header__map">
-          <a class="header__map_item" href="#">
+        <div class="location">
+          <a class="location__map" href="#">
             <img src="./img/map.svg" alt="">
           </a>
-          <div class="header__map_text">г. Москва, ул. Перерва д. 39</div>
+          <div class="location__address">г. Москва, ул. Перерва д. 39</div>
         </div>
-        <a class="header__phone" href="#">
-          <img class="header__phone_img" src="./img/phone.svg" alt="">
-          <div class="header__phone_info">
-            <div class="header__phone_number">+7 985 <span>535 76 66</span></div>
-            <div class="header__phone_text"><span></span>Звоните в любое время</div>
+        <a class="contacts" href="#">
+          <img class="contacts__icon" src="./img/phone.svg" alt="">
+          <div class="contacts__wrap">
+            <div class="contacts__number">+7 985 <span>535 76 66</span></div>
+            <div class="contacts__desc"><span></span>Звоните в любое время</div>
           </div>
         </a>
       </div>
       
     </header>
     <section class="intro">
-      <div class="intro__img_group">
-        <img src="./img/firstPerson.png" class="intro__img_person" alt="">
-        <img src="./img/signature.svg" class="intro__img_signature" alt="">
-        <img src="./img/elipseEffect.png" class="intro__img_effect" alt="">
-        <div class="intro__img_name">
-          <div class="name">Бабаян Давид</div>
+      <div class="pictures">
+        <img src="./img/firstPerson.png" class="pictures__person" alt="">
+        <img src="./img/signature.svg" class="pictures__signature" alt="">
+        <img src="./img/elipseEffect.png" class="pictures__effect" alt="">
+        <div class="nametag">
+          <div>Бабаян Давид</div>
           <img src="./img/user.svg" alt="">
         </div>
-        <div class="intro__img_desc">
-          <div class="intro__img_slogan">Наша клиника скорее</div>
-          <div class="intro__img_slogan">гостеприимный дом,</div>
-          <span class="intro__img_span">чем официальное медицинское учреждение</span>
+        <div class="slogan">
+          <div class="slogan__item">Наша клиника скорее</div>
+          <div class="slogan__item">гостеприимный дом,</div>
+          <span class="slogan__item_span">чем официальное медицинское учреждение</span>
         </div>
       </div>
-      <div class="intro__group">
-        <h1 class="intro__title">АМЕРИКАНСКИЙ СТОМАТОЛОГИЧЕСКИЙ ЦЕНТР «ДАНТИСТ»</h1>
+      <div class="intro__wrapper">
+        <h1 class="intro__title_h1">АМЕРИКАНСКИЙ СТОМАТОЛОГИЧЕСКИЙ ЦЕНТР «ДАНТИСТ»</h1>
         <div class="intro__text">
           Обратившись к нам, Вы можете быть уверены,
           что Вас обслужат на высшем уровне, и все Ваши проблемы
           с зубами останутся в прошлом.
         </div>
-        <div class="intro_record">
-          <div class="intro__record_filter">
-            <div class="intro__record_bgBlur"></div>
-            <div class="intro__record_bg"></div>
+        <div class="button__wrapper">
+          <div class="button__filter">
+            <div class="button__blur lg"></div>
+            <div class="button__bg"></div>
           </div>
-          <button class="button__record lg">Записаться на прием</button>
-          
-        </div>
-        
-        <div class="intro__card">
-          <img src="./img/implant.svg" class="intro__card_img" alt="">
-          <div class="intro__card_info">
-            <div class="intro__card_title">Имплантация передних зубов</div>
-            <div class="intro__card_desc">
+          <button class="button lg">Записаться на прием</button>
+        </div>        
+        <div class="card">
+          <img src="./img/implant.svg" class="card__img" alt="">
+          <div class="card__info">
+            <div class="card__title">Имплантация передних зубов</div>
+            <div class="card__desc">
               Передние зубы представлены резцами
               и клыками. Отличительной особенностью...
             </div>
-            <a class="intro__card_link link" href="#">Читать полностью</a>
+            <a class="link" href="#">Читать полностью</a>
           </div>
-          <button class="button__arrow" style="position: absolute; right: -27px">
+          <button class="button__arrow card__button">
             <img class="right" src="./img/angle-right.svg" alt="">
           </button>
         </div>
       </div>
+    </section>
+    <section class="services">
+      <h3 class="services__name sectionName">Наши услуги</h3>
+      <h2 class="services__title title_h2">Мы предлагаем <span>полное медицинское обслуживание</span>
+         людям с различными проблемами со здоровьем</h2>
+      <div class="slider" style="font-size: 60px ; text-align: center;">
+        СЛАЙДЕР
+      </div>
+    </section>
+    <section class="clinic">
+      <div class="hero-info">
+        <h2 class="clinic-info__title title_h2 hero">
+          <img src="./img/star.svg" class="clinic-info__title_star" alt="">
+          <span>Бабаян</span>
+                Давид
+        </h2>
+        <div class="hero-info__post">Главный врач</div>
+        
+        <div class="button__wrapper">
+          <div class="button__filter">
+            <div class="button__blur"></div>
+          </div>
+          <button class="button">Записаться на прием</button>
+        </div>  
+      </div>
+      <div class="hero-pictures">
+        <img class="hero-pictures__hero" src="./img/person.png" alt="">
+        <img class="hero-pictures__signature" src="./img/signature.svg" alt="">
+      </div>
+      <div class="clinic-info__text">
+        <h3 class="clinic-info__name sectionName">Наша клиника</h3>
+        <h2 class="clinic-info__title title_h2">
+          <img src="./img/star.svg" class="clinic__title_star" alt="">
+          <span>«Цена под ключ»</span>Мы работаем по удобной пациентам системе
+        </h2>
+        <pre class="clinic-info__desc">
+        <span>
+Для нас очень важно, чтобы пациент до начала лечения
+понимал какой будет итоговая сумма за все лечение, без
+подводных камней и необоснованных доплат.
+        </span>
+Для этого мы сделали простой и понятный прайс-лист.
+Дантист — одна из немногих клиник в Москве, которая
+может предложить высокий профессионализм врачей,
+самые современные, безопасные материалы
+и демократичные цены.
+         </p>
+      </div>
+
+      
     </section>
   </div>
   

@@ -74,25 +74,66 @@ a {
   transition-duration: 0.25s;
 }
 
-.button__record {
+.button {
   background-color: #E21F4D;
+  width: 252px;
   border-radius: 1000px;
   border: 1px solid rgba(255, 255, 255, 0.46);
+  font-size: 16px;
   font-weight: 600;
   color: #FFFFFF;
   box-shadow: inset 0 0 27px rgba(255, 255, 255, 0.46), inset 0 0 4px rgba(255, 255, 255, 0.46);
+  padding: 24px 38px;
 }
-.button__record.lg {
+.button.sm {
+  width: 147px;
+  font-size: 14px;
+  padding: 10px 33px;
+}
+.button.lg {
+  width: 294px;
   font-size: 18px;
   padding: 28px 52px;
 }
-.button__record:hover, .button__record:active {
+.button:hover, .button:active {
   background-color: #f5406a;
   transition: ease-in-out 0.25s;
 }
 
+.button__wrapper {
+  position: relative;
+}
+.button__wrapper .button__bg {
+  z-index: 1;
+  width: 236px;
+  height: 64px;
+  border-radius: 1000px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: solid 1px #FFFFFF;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button__wrapper .button__blur {
+  position: absolute;
+  z-index: 2;
+  width: 203px;
+  height: 64px;
+  border-radius: 1000px;
+  background-color: rgba(226, 31, 77, 0.6);
+  filter: blur(34px);
+}
+.button__wrapper .button__blur.lg {
+  width: 236px;
+}
+.button__wrapper .button__filter {
+  z-index: -1;
+  position: absolute;
+  margin-top: 27px;
+  margin-left: 28px;
+}
+
 body {
   background-color: #FFFFFF;
+  color: #3F3F3F;
 }
 
 .wrapper {
@@ -108,9 +149,8 @@ body {
   margin: 0 auto;
   font-size: 14px;
   text-align: left;
-  color: #3F3F3F;
 }
-.header__vertical-line {
+.header .vertical-line {
   width: 1px;
   height: 36px;
   background-color: #3F3F3F;
@@ -119,7 +159,7 @@ body {
   top: 30px;
   left: 222px;
 }
-.header__group {
+.header__wrapper {
   display: flex;
   width: 100%;
   height: 100%;
@@ -131,21 +171,21 @@ body {
   margin-left: 52px;
   width: 180px;
 }
-.header__map {
+.header .location {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
 }
-.header__map_item img {
+.header .location__map img {
   border-radius: 50px;
   border: solid #FFFFFF 6px;
 }
-.header__map_text {
+.header .location__address {
   align-items: center;
   width: 120px;
 }
-.header__phone {
+.header .contacts {
   width: 233px;
   display: flex;
   gap: 8px;
@@ -155,26 +195,26 @@ body {
   border-radius: 673px;
   box-shadow: 0 2px 5px rgba(118, 118, 118, 0.3);
 }
-.header__phone_img {
+.header .contacts__icon {
   width: 31px;
   height: 31px;
 }
-.header__phone_number {
+.header .contacts__number {
   font-size: 20px;
   line-height: 20px;
   color: #818181;
 }
-.header__phone_number span {
+.header .contacts__number span {
   font-weight: 600;
   color: #E21F4D;
 }
-.header__phone_text {
+.header .contacts__desc {
   position: relative;
   text-align: right;
   color: #767676;
   font-size: 10px;
 }
-.header__phone_text span {
+.header .contacts__desc span {
   position: absolute;
   width: 4px;
   height: 4px;
@@ -183,35 +223,35 @@ body {
   top: 5.5px;
   left: 32px;
 }
-.header__phone:hover {
+.header .contacts:hover {
   background-color: #fcc7d4;
 }
 
 .intro {
   display: flex;
   margin-top: 26px;
-  color: #3F3F3F;
+  margin-bottom: 48px;
 }
-.intro__img_group {
+.intro .pictures {
   position: relative;
 }
-.intro__img_person {
+.intro .pictures__person {
   position: relative;
   z-index: 5;
 }
-.intro__img_signature {
+.intro .pictures__signature {
   z-index: 5;
   position: absolute;
   right: -55px;
   bottom: 10px;
 }
-.intro__img_effect {
+.intro .pictures__effect {
   z-index: 4;
   position: absolute;
   left: -380px;
   bottom: 4px;
 }
-.intro__img_name {
+.intro .pictures .nametag {
   top: 506px;
   left: 169px;
   z-index: 6;
@@ -229,7 +269,7 @@ body {
   align-items: center;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
-.intro__img_name img {
+.intro .pictures .nametag img {
   width: 26px;
   height: 26px;
   border: 1px solid #FFFFFF;
@@ -238,18 +278,18 @@ body {
   margin-top: 5px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
-.intro__img_desc {
+.intro .pictures .slogan {
   text-align: left;
 }
-.intro__img_desc > div:nth-child(1) {
+.intro .pictures .slogan > div:nth-child(1) {
   top: 549px;
   left: 193px;
 }
-.intro__img_desc > div:nth-child(2) {
+.intro .pictures .slogan > div:nth-child(2) {
   top: 582px;
   left: 193px;
 }
-.intro__img_slogan {
+.intro .pictures .slogan__item {
   z-index: 5;
   position: absolute;
   top: 20px;
@@ -260,9 +300,9 @@ body {
   font-size: 18px;
   line-height: 28px;
 }
-.intro__img_span {
+.intro .pictures .slogan__item_span {
   z-index: 5;
-  top: 611px;
+  top: 615px;
   left: 193px;
   position: absolute;
   display: inline-block;
@@ -273,38 +313,11 @@ body {
   font-size: 11px;
   padding: 7.5px 15px 13.5px 23px;
 }
-.intro__group {
+.intro__wrapper {
   z-index: 5;
   margin-left: 75px;
 }
-.intro__record {
-  position: relative;
-}
-.intro__record_bg {
-  z-index: 1;
-  width: 236px;
-  height: 64px;
-  border-radius: 1000px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: solid 1px #FFFFFF;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-.intro__record_bgBlur {
-  position: absolute;
-  z-index: 2;
-  width: 236px;
-  height: 64px;
-  border-radius: 1000px;
-  background-color: rgba(226, 31, 77, 0.6);
-  filter: blur(34px);
-}
-.intro__record_filter {
-  z-index: -1;
-  position: absolute;
-  margin-top: 27px;
-  margin-left: 28px;
-}
-.intro__title {
+.intro__title_h1 {
   margin-left: -57px;
   margin-top: 53px;
   margin-bottom: 41px;
@@ -321,7 +334,7 @@ body {
   text-align: left;
   margin-bottom: 31px;
 }
-.intro__card {
+.intro .card {
   display: flex;
   position: relative;
   align-items: center;
@@ -332,33 +345,123 @@ body {
   background-color: #FFFFFF;
   box-shadow: 0 2px 5px rgba(118, 118, 118, 0.3);
 }
-.intro__card_img {
+.intro .card__img {
   width: 55px;
   height: 55px;
   margin: 43px 28px;
 }
-.intro__card_info {
+.intro .card__info {
   text-align: left;
   margin-right: 35px;
 }
-.intro__card_title {
+.intro .card__title {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
 }
-.intro__card_desc {
+.intro .card__desc {
   font-size: 13px;
   margin-bottom: 10px;
 }
-.intro__card_link {
-  color: #3F3F3F;
-  font-size: 13px;
-  border-bottom: 1px dotted rgba(118, 118, 118, 0.3);
+.intro .card__button {
+  position: absolute;
+  right: -27px;
 }
-.intro__card_link:hover {
-  border-bottom: 1px dotted #767676;
-  transition: ease;
-  transition-duration: 0.25s;
+
+.sectionName {
+  display: inline-block;
+  color: #E21F4D;
+  font-size: 14px;
+  padding: 13px 29px;
+  background-color: #FFFFFF;
+  border-radius: 350px;
+  box-shadow: 0 4px 59px rgba(0, 0, 0, 0.08);
+}
+
+.title_h2 {
+  text-align: left;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.title_h2 span {
+  color: #E21F4D;
+  font-weight: 800;
+}
+
+.services__name {
+  width: 150px;
+  margin-bottom: 16px;
+}
+.services__title {
+  margin-left: 12px;
+  margin-bottom: 54px;
+}
+.services .slider {
+  width: 100%;
+  height: 400px;
+  background-color: #79BC6E;
+  margin-bottom: 100px;
+}
+
+.clinic {
+  display: flex;
+}
+.clinic .hero-info .hero {
+  width: 206px;
+  font-size: 55px;
+  line-height: 105%;
+  text-transform: none;
+  font-weight: 400;
+  text-align: start;
+}
+.clinic .hero-info .hero span {
+  font-weight: 600;
+}
+.clinic .hero-info__post {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 33px;
+}
+.clinic .hero-pictures {
+  position: relative;
+}
+.clinic .hero-pictures__hero {
+  position: absolute;
+  top: 0px;
+  left: -100px;
+}
+.clinic .hero-pictures__signature {
+  position: absolute;
+  max-width: 110px;
+  top: 410px;
+  right: -725px;
+}
+.clinic-info__text {
+  margin-left: 319px;
+}
+.clinic-info__name {
+  margin-bottom: 20px;
+}
+.clinic-info__title {
+  position: relative;
+  width: 433px;
+  margin-bottom: 20px;
+}
+.clinic-info__title_star {
+  position: absolute;
+  top: -6px;
+  left: -13px;
+}
+.clinic-info__desc {
+  text-align: left;
+  margin-left: 99px;
+  font-size: 16px;
+  line-height: 150%;
+}
+.clinic-info__desc span {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */
