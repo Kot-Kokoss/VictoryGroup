@@ -638,4 +638,76 @@ body {
   padding-bottom: 46px;
 }
 
+.principles {
+  display: flex;
+  justify-content: end;
+}
+.principles-pictures {
+  position: relative;
+  z-index: -1;
+}
+.principles-pictures__hero {
+  position: absolute;
+  top: -120px;
+  left: -890px;
+}
+.principles-pictures__star_1 {
+  position: absolute;
+  top: 70px;
+  left: 495px;
+}
+.principles-pictures__star_2 {
+  position: absolute;
+  top: 720px;
+  left: 350px;
+}
+.principles-pictures__star_3 {
+  position: absolute;
+  top: 780px;
+  left: 450px;
+}
+.principles-info {
+  margin-top: 54px;
+}
+.principles-info__name {
+  margin-bottom: 20px;
+}
+.principles-info__title {
+  width: 575px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.principles-info__title .black {
+  color: #3F3F3F;
+}
+.principles-list {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 20px;
+  margin-bottom: 29px;
+}
+.principles-list__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 80px;
+  border-radius: 11px;
+  background-color: #FFFFFF;
+  padding: 10px 0 10px 20px;
+  box-shadow: 0 16px 59px 0 rgba(0, 0, 0, 0.08);
+}
+.principles-list__item img {
+  width: 60px;
+}
+.principles-list__desc {
+  width: 260px;
+  font-size: 11px;
+}
+.principles-list__desc span {
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=styles.css.map */
