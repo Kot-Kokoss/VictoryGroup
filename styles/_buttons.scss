@@ -76,6 +76,7 @@
     background-color: $red_hover;
     transition: ease-in-out 0.25s;
   }
+  
 }
 
 .button__wrapper {
@@ -110,5 +111,51 @@
     position: absolute;
     margin-top: 27px;
     margin-left: 28px;
+  }
+}
+
+.button-more-details {
+  width: 162px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  color: $red;
+  border-radius: 1000px;
+  border: 1px solid $red;
+  box-shadow: 0px 5px 7px 4px(#112758, 0.2);
+
+  div {
+    padding: 15px 5px 16px 30px;
+  }
+
+  img {
+    width: 23px;
+    height: 23px;
+    margin-top: 21px;
+  }
+
+  &:hover, &:active {
+    background-color: $linear;
+    transition: ease-in-out 0.25s;
+  }
+}
+
+.button-load {
+  color: $white;
+  width: 195px;
+  height: 54px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 17px 30px 15px 30px;
+  border-radius: 1000px;
+  background-color: $red_hover;
+  border: 0;
+  box-shadow: inset 0 0 27px 4px ($white, 0.25);
+
+  &:hover, &:active {
+    background-color: #f56687;
+    transition: ease-in-out 0.25s;
   }
 }

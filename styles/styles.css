@@ -131,6 +131,48 @@ a {
   margin-left: 28px;
 }
 
+.button-more-details {
+  width: 162px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  color: #E21F4D;
+  border-radius: 1000px;
+  border: 1px solid #E21F4D;
+  box-shadow: 0px 5px 7px 4px #112758, 0.2;
+}
+.button-more-details div {
+  padding: 15px 5px 16px 30px;
+}
+.button-more-details img {
+  width: 23px;
+  height: 23px;
+  margin-top: 21px;
+}
+.button-more-details:hover, .button-more-details:active {
+  background-color: #fcc7d4;
+  transition: ease-in-out 0.25s;
+}
+
+.button-load {
+  color: #FFFFFF;
+  width: 195px;
+  height: 54px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 17px 30px 15px 30px;
+  border-radius: 1000px;
+  background-color: #f5406a;
+  border: 0;
+  box-shadow: inset 0 0 27px 4px #FFFFFF, 0.25;
+}
+.button-load:hover, .button-load:active {
+  background-color: #f56687;
+  transition: ease-in-out 0.25s;
+}
+
 .serviceSwiper {
   position: relative;
 }
@@ -412,6 +454,53 @@ body {
   background-color: #79BC6E;
   margin-bottom: 100px;
 }
+.services .services-card {
+  width: 370px;
+  height: 400px;
+  margin-bottom: 200px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 14px 66px rgba(0, 0, 0, 0.1);
+}
+.services .services-card__img {
+  width: 100%;
+  height: 50%;
+}
+.services .services-card__info {
+  width: 100%;
+  height: 50%;
+  padding: 34px 31px 35px 31px;
+}
+.services .services-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.services .services-card__desc {
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.services .services-card__wrapper {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+.services .services-btn-wrapper {
+  position: relative;
+  z-index: 5;
+}
+.services .services-btn-wrapper .services-btn-prev {
+  position: absolute;
+  top: -325px;
+  left: -27px;
+}
+.services .services-btn-wrapper .services-btn-next {
+  position: absolute;
+  top: -325px;
+  right: -27px;
+}
 
 .clinic {
   display: flex;
@@ -434,6 +523,7 @@ body {
 }
 .clinic .hero-pictures {
   position: relative;
+  z-index: -1;
 }
 .clinic .hero-pictures__hero {
   position: absolute;
@@ -472,53 +562,80 @@ body {
   font-weight: 600;
 }
 
-.services-card {
-  width: 370px;
-  height: 400px;
-  margin-bottom: 200px;
+.specialists {
+  margin: 0 auto;
+  margin-top: -30px;
+  padding: 0 149px;
+  width: 79vw;
+  border-radius: 50px;
+  background-color: #F5F5F5;
+}
+.specialists .specialist-info {
+  display: flex;
+  justify-content: space-between;
+}
+.specialists .specialist-info__wrapper {
+  margin-left: 32px;
+}
+.specialists .specialist-info__name {
+  margin-top: 54px;
+  margin-bottom: 12px;
+}
+.specialists .specialist-info__title {
+  width: 327px;
+  margin-bottom: 50px;
+}
+.specialists .specialist-info__desc {
+  position: relative;
+  width: 428px;
+  margin-top: 82px;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+}
+.specialists .specialist-info__desc img {
+  position: absolute;
+  top: -13px;
+  left: -13px;
+}
+.specialists .specialist-info__desc span {
+  font-weight: 700;
+}
+.specialists .specs {
+  display: grid;
+  gap: 25px;
+  margin-bottom: 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.specialists .specs__item {
   background-color: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 0 14px 66px rgba(0, 0, 0, 0.1);
+  padding: 35px 31px;
+  width: 384px;
+  height: 606px;
 }
-.services-card__img {
-  width: 100%;
-  height: 50%;
-}
-.services-card__info {
-  width: 100%;
-  height: 50%;
-  padding: 34px 31px 35px 31px;
-}
-.services-card__title {
-  font-size: 18px;
-  font-weight: 500;
-  text-align: left;
-  margin-bottom: 10px;
-}
-.services-card__desc {
-  font-size: 13px;
-  text-align: left;
+.specialists .specs__item img {
   margin-bottom: 20px;
 }
-.services-card__wrapper {
+.specialists .specs__name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.specialists .specs__profession {
+  color: #E21F4D;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.specialists .specs__desc {
+  opacity: 60%;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.specialists .button-wrap {
   display: flex;
-  gap: 17px;
-  align-items: center;
-}
-
-.services-btn-wrapper {
-  position: relative;
-  z-index: 5;
-}
-.services-btn-wrapper .services-btn-prev {
-  position: absolute;
-  top: -325px;
-  left: -27px;
-}
-.services-btn-wrapper .services-btn-next {
-  position: absolute;
-  top: -325px;
-  right: -27px;
+  justify-content: center;
+  padding-bottom: 46px;
 }
 
 /*# sourceMappingURL=styles.css.map */
