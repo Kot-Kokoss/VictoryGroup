@@ -278,6 +278,8 @@ body {
 }
 .intro .pictures {
   position: relative;
+  width: auto;
+  height: auto;
 }
 .intro .pictures__person {
   position: relative;
@@ -362,10 +364,8 @@ body {
   margin-left: 75px;
 }
 .intro__title_h1 {
-  margin-left: -57px;
-  margin-top: 53px;
-  margin-bottom: 41px;
-  width: 650px;
+  margin: 53px 18vw 41px -57px;
+  width: auto;
   text-align: left;
   font-size: 55px;
   line-height: 70px;
@@ -449,8 +449,8 @@ body {
   margin-bottom: 100px;
 }
 .services .services-card {
-  width: 370px;
-  height: 400px;
+  width: 19.5vw;
+  height: 21.1vw;
   margin-bottom: 200px;
   background-color: #FFFFFF;
   border-radius: 10px;
@@ -652,7 +652,9 @@ body {
 .principles-pictures__hero {
   position: absolute;
   top: 10px;
-  left: -776px;
+  left: -40.8vw;
+  width: 45vw;
+  height: 45vw;
 }
 .principles-pictures__star_1 {
   position: absolute;
@@ -747,6 +749,11 @@ body {
   font-size: 14px;
   color: #E21F4D;
 }
+@media (max-width: 1750px) {
+  .reviews-types {
+    max-width: 400px;
+  }
+}
 .reviews-links {
   position: relative;
   z-index: 5;
@@ -777,9 +784,12 @@ body {
   padding-bottom: 89px;
 }
 .reviews .review-window__content {
-  width: 792px;
-  height: 482px;
   position: relative;
+  width: 41.7vw;
+}
+.reviews .review-window__content .video {
+  width: 41.7vw;
+  height: 25vw;
 }
 .reviews .review-window__content .play-btn {
   position: absolute;
@@ -849,12 +859,14 @@ body {
   z-index: 10;
 }
 .reviews .review-btn-wrapper .review-btn-prev {
-  top: 0px;
-  left: 0px;
+  position: absolute;
+  top: -53px;
+  left: -205px;
 }
 .reviews .review-btn-wrapper .review-btn-next {
-  top: 0px;
-  left: 0px;
+  position: absolute;
+  top: 498px;
+  left: -205px;
 }
 
 .lecenses {

@@ -121,6 +121,8 @@ body {
 
   .pictures {
     position: relative;
+    width: auto;
+    height: auto;
 
     &__person {
       position: relative;
@@ -217,10 +219,8 @@ body {
   }
   
   &__title_h1 {
-    margin-left: -57px;
-    margin-top: 53px;
-    margin-bottom: 41px;
-    width: 650px;
+    margin: 53px 18vw 41px -57px;
+    width: auto;
     text-align: left;
     font-size: 55px;
     line-height: 70px;
@@ -322,8 +322,8 @@ body {
   }
 
   .services-card {
-    width: 370px;
-    height: 400px;
+    width: 19.5vw;
+    height: 21.1vw;
     margin-bottom: 200px;
     background-color: $white;
     border-radius: 10px;
@@ -564,12 +564,13 @@ body {
   &-pictures {
     position: relative;
     z-index: 2;
-    
  
     &__hero {
       position: absolute;
       top: 10px;
-      left: -776px;
+      left: -40.8vw;
+      width: 45vw;
+      height: 45vw;    
     }
 
     &__star_1 {
@@ -685,6 +686,10 @@ body {
         color: $red;
       }
     }
+
+    @media (max-width: 1750px) {
+      max-width: 400px;
+    }
   }
 
   &-links {
@@ -721,9 +726,13 @@ body {
     padding-bottom: 89px;
 
     &__content {
-      width: 792px;
-      height: 482px;
       position: relative;
+      width: 41.7vw;
+
+      .video {
+        width: 41.7vw;
+        height: 25vw;
+      }
 
       .play-btn {
         position: absolute;
@@ -807,15 +816,16 @@ body {
     position: relative;
     z-index: 10;
     
-
     .review-btn-prev {
-      top: 0px;
-      left: 0px;
+      position: absolute;
+      top: -53px;
+      left: -205px;
     }
 
     .review-btn-next {
-      top: 0px;
-      left: 0px;
+      position: absolute;
+      top: 498px;
+      left: -205px;
     }
   }
 }
