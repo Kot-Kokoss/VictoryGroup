@@ -168,7 +168,7 @@ a {
   border-radius: 1000px;
   background-color: #f5406a;
   border: 0;
-  box-shadow: inset 0 0 27px 4px #FFFFFF, 0.25;
+  box-shadow: inset 0 0 27px 4px rgba(255, 255, 255, 0.25);
 }
 .button-load:hover, .button-load:active {
   background-color: #f56687;
@@ -361,7 +361,9 @@ body {
 }
 .intro__wrapper {
   z-index: 5;
-  margin-left: 75px;
+  margin-left: 4vw;
+  max-width: 650px;
+  margin-right: 18vw;
 }
 .intro__title_h1 {
   margin: 53px 18vw 41px -57px;
@@ -372,31 +374,44 @@ body {
   font-weight: 800;
 }
 .intro__text {
-  width: 425px;
+  max-width: 425px;
+  width: 22.4vw;
   font-size: 18px;
   line-height: 150%;
   text-align: left;
   margin-bottom: 31px;
+}
+@media (max-width: 1440px) {
+  .intro__title_h1 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .intro__text {
+    font-size: 13px;
+    line-height: 150%;
+    text-align: left;
+    margin-bottom: 31px;
+  }
 }
 .intro .card {
   display: flex;
   position: relative;
   align-items: center;
   margin-top: 39.5px;
-  width: 427px;
+  width: 22.5vw;
   height: 140px;
   border-radius: 10px;
   background-color: #FFFFFF;
   box-shadow: 0 2px 5px rgba(118, 118, 118, 0.3);
 }
 .intro .card__img {
-  width: 55px;
-  height: 55px;
-  margin: 43px 28px;
+  width: 3vw;
+  height: 3vw;
+  margin: 2vw 1.4vw;
 }
 .intro .card__info {
   text-align: left;
-  margin-right: 35px;
+  margin-right: 1.8vw;
 }
 .intro .card__title {
   font-size: 18px;
@@ -410,6 +425,105 @@ body {
 .intro .card__button {
   position: absolute;
   right: -27px;
+}
+@media (max-width: 1440px) {
+  .intro .card__title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .intro .card__desc {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column-reverse;
+  }
+  .intro .pictures {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  .intro .pictures__person {
+    position: relative;
+    z-index: 5;
+  }
+  .intro .pictures__signature {
+    z-index: 5;
+    position: absolute;
+    right: -55px;
+    bottom: 10px;
+  }
+  .intro .pictures__effect {
+    z-index: -1;
+    position: absolute;
+    left: -380px;
+    bottom: 4px;
+  }
+  .intro .pictures .nametag {
+    top: 506px;
+    left: 169px;
+    z-index: 6;
+    position: absolute;
+    display: flex;
+    width: 185px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 9.5px 0px 13.5px 18px;
+    gap: 11px;
+    color: #E21F4D;
+    font-size: 16px;
+    font-weight: 700;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  }
+  .intro .pictures .nametag img {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+    padding: 0px 7px;
+    margin-top: 5px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  }
+  .intro .pictures .slogan {
+    text-align: left;
+  }
+  .intro .pictures .slogan > div:nth-child(1) {
+    top: 549px;
+    left: 193px;
+  }
+  .intro .pictures .slogan > div:nth-child(2) {
+    top: 582px;
+    left: 193px;
+  }
+  .intro .pictures .slogan__item {
+    z-index: 5;
+    position: absolute;
+    top: 20px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 7.5px 15px 13.5px 23px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .intro .pictures .slogan__item_span {
+    z-index: 5;
+    top: 615px;
+    left: 193px;
+    position: absolute;
+    display: inline-block;
+    color: #969696;
+    width: 178px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 11px;
+    padding: 7.5px 15px 13.5px 23px;
+  }
 }
 
 .sectionName {
@@ -450,7 +564,7 @@ body {
 }
 .services .services-card {
   width: 19.5vw;
-  height: 21.1vw;
+  height: auto;
   margin-bottom: 200px;
   background-color: #FFFFFF;
   border-radius: 10px;
@@ -458,12 +572,12 @@ body {
 }
 .services .services-card__img {
   width: 100%;
-  height: 50%;
+  height: 10.55vw;
 }
 .services .services-card__info {
   width: 100%;
-  height: 50%;
-  padding: 34px 31px 35px 31px;
+  height: auto;
+  padding: 1.7vw 1.6vw;
 }
 .services .services-card__title {
   font-size: 18px;
@@ -480,6 +594,7 @@ body {
   display: flex;
   gap: 17px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .services .serviceSwiper {
   position: relative;
@@ -529,15 +644,16 @@ body {
   position: absolute;
   top: 0px;
   left: -100px;
+  width: 27vw;
+  height: 26vw;
 }
 .clinic .hero-pictures__signature {
   position: absolute;
-  max-width: 110px;
   top: 410px;
-  right: -725px;
+  right: -38.2vw;
 }
 .clinic-info__text {
-  margin-left: 319px;
+  margin-left: 17vw;
 }
 .clinic-info__name {
   margin-bottom: 20px;
@@ -554,12 +670,27 @@ body {
 }
 .clinic-info__desc {
   text-align: left;
-  margin-left: 99px;
+  margin-left: 5vw;
   font-size: 16px;
   line-height: 150%;
 }
 .clinic-info__desc span {
   font-weight: 600;
+}
+@media (max-width: 1440px) {
+  .clinic .hero-info .hero {
+    width: 10.8vw;
+    font-size: 30px;
+  }
+  .clinic-info__desc {
+    text-align: left;
+    margin-left: 5vw;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .clinic-info__desc span {
+    font-weight: 600;
+  }
 }
 
 .specialists {
@@ -567,14 +698,16 @@ body {
   z-index: 5;
   margin: 0 auto;
   margin-top: -30px;
-  padding: 0 149px;
+  padding: 0 8vw;
   width: 79vw;
   border-radius: 50px;
   background-color: #F5F5F5;
 }
 .specialists .specialist-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 .specialists .specialist-info__wrapper {
   margin-left: 32px;
@@ -585,7 +718,6 @@ body {
 }
 .specialists .specialist-info__title {
   width: 327px;
-  margin-bottom: 50px;
 }
 .specialists .specialist-info__desc {
   position: relative;
@@ -637,7 +769,23 @@ body {
 .specialists .button-wrap {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
   padding-bottom: 46px;
+}
+@media (max-width: 1750px) {
+  .specialists .specs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1440px) {
+  .specialists .specialist-info__desc {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1162px) {
+  .specialists .specs {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .principles {
@@ -652,7 +800,7 @@ body {
 .principles-pictures__hero {
   position: absolute;
   top: 10px;
-  left: -40.8vw;
+  left: -35.8vw;
   width: 45vw;
   height: 45vw;
 }
@@ -672,6 +820,8 @@ body {
   left: 450px;
 }
 .principles-info {
+  position: relative;
+  z-index: 5;
   margin-top: 54px;
 }
 .principles-info__name {
@@ -686,7 +836,7 @@ body {
   color: #3F3F3F;
 }
 .principles-list {
-  margin-left: 100px;
+  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -720,7 +870,7 @@ body {
   background-color: #F5F5F5;
   border-radius: 50px;
   margin: 0 auto;
-  padding: 0 165px;
+  padding: 0 8.6vw;
   width: 79vw;
 }
 .reviews__name {
@@ -793,8 +943,10 @@ body {
 }
 .reviews .review-window__content .play-btn {
   position: absolute;
-  top: 140px;
-  left: 300px;
+  top: 7.4vw;
+  left: 15.8vw;
+  width: 10.8vw;
+  height: auto;
 }
 .reviews .review-card__item {
   display: flex;
@@ -882,7 +1034,9 @@ body {
   z-index: 2;
   position: absolute;
   top: 0;
-  left: -500px;
+  left: -26.3vw;
+  width: 24vw;
+  height: 25.5vw;
 }
 .lecenses-pictures__info {
   position: absolute;
@@ -941,7 +1095,7 @@ body {
 
 .footer {
   width: 100%;
-  height: 575px;
+  height: 30vw;
   overflow: hidden;
   background-image: url("../img/photo/footer_bg.png");
 }
@@ -977,8 +1131,8 @@ body {
   align-items: flex-start;
 }
 .footer .map {
-  width: 604px;
-  height: 604px;
+  width: 31.79vw;
+  height: 31.79vw;
   border: 1px solid #E21F4D;
   border-radius: 1000px;
   overflow: hidden;
